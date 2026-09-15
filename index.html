@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asko - Think. Ask. Create.</title>
+    <meta name="description" content="Intelligent multimodal AI assistant powered by Google Gemini. Created by Asfand Amjad." />
+    <meta property="og:title" content="Asko - Think. Ask. Create." />
+    <meta property="og:description" content="Intelligent multimodal AI assistant powered by Google Gemini. Created by Asfand Amjad." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem("asko_settings_v1");
+          var theme = "dark";
+          if (saved) {
+            var parsed = JSON.parse(saved);
+            if (parsed && (parsed.theme === "light" || parsed.theme === "dark")) {
+              theme = parsed.theme;
+            }
+          }
+          document.documentElement.setAttribute("data-theme", theme);
+          if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
+          } else {
+            document.documentElement.classList.add("light");
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="theme-bg-canvas theme-text-primary antialiased selection:bg-amber-500/20 selection:text-amber-800 dark:selection:text-amber-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

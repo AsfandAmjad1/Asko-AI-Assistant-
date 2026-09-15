@@ -1,0 +1,6 @@
+{
+  "name": "Asko",
+  "description": "Intelligent multimodal AI assistant powered by Google Gemini. Think. Ask. Create. Created by Asfand Amjad.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

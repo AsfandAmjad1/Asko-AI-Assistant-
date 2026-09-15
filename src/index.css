@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   Asko Centralized Theme System & Design Tokens
+   ========================================================== */
+
+:root,
+[data-theme="dark"],
+.dark {
+  /* Surface and Background Tokens */
+  --bg-primary: #090b10;
+  --bg-secondary: #0e1118;
+  --bg-tertiary: #131722;
+  --bg-canvas: #0b0d14;
+  --bg-sidebar: #090b10;
+  --bg-sidebar-footer: #07080d;
+  --bg-header: rgba(13, 16, 23, 0.94);
+  --bg-surface: #131722;
+  --bg-surface-elevated: #181d2c;
+  --bg-surface-hover: #1b2132;
+  --bg-surface-active: #222a40;
+  --bg-input: #121622;
+  --bg-input-focus: #141927;
+  --bg-card: #131722;
+  --bg-card-hover: #181e2e;
+  --bg-modal: #111520;
+  --bg-modal-header: #0d1018;
+  --bg-dropdown: #131722;
+  --bg-user-msg: rgba(11, 14, 20, 0.7);
+  --bg-model-msg: #10131d;
+  --bg-code: #090b10;
+  --bg-code-header: #131722;
+  --bg-tag: rgba(30, 41, 59, 0.85);
+  --bg-pill: rgba(30, 41, 59, 0.65);
+
+  /* Typography Tokens */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-inverse: #090b10;
+
+  /* Border and Divider Tokens */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-default: #1e2638;
+  --border-strong: #2c3850;
+  --border-input: #232c40;
+  --border-focus: #f59e0b;
+
+  /* Brand Accent Tokens (Asko Amber Gold) */
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --accent-active: #d97706;
+  --accent-light: rgba(245, 158, 11, 0.15);
+  --accent-border: rgba(245, 158, 11, 0.35);
+  --accent-text: #fbbf24;
+  --accent-contrast: #090b10;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
+
+  /* Scrollbars */
+  --scrollbar-track: #090b10;
+  --scrollbar-thumb: #1e2638;
+  --scrollbar-thumb-hover: #2e3b52;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"],
+.light {
+  /* Surface and Background Tokens */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-canvas: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --bg-sidebar-footer: #f8fafc;
+  --bg-header: rgba(255, 255, 255, 0.94);
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --bg-surface-active: #e2e8f0;
+  --bg-input: #ffffff;
+  --bg-input-focus: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-modal: #ffffff;
+  --bg-modal-header: #f8fafc;
+  --bg-dropdown: #ffffff;
+  --bg-user-msg: #f8fafc;
+  --bg-model-msg: #ffffff;
+  --bg-code: #0f172a;
+  --bg-code-header: #1e293b;
+  --bg-tag: #f1f5f9;
+  --bg-pill: #e2e8f0;
+
+  /* Typography Tokens */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Border and Divider Tokens */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-input: #cbd5e1;
+  --border-focus: #d97706;
+
+  /* Brand Accent Tokens (Asko Amber Gold) */
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-active: #92400e;
+  --accent-light: rgba(217, 119, 6, 0.12);
+  --accent-border: rgba(217, 119, 6, 0.28);
+  --accent-text: #b45309;
+  --accent-contrast: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+
+  /* Scrollbars */
+  --scrollbar-track: #f8fafc;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+
+  color-scheme: light;
+}
+
+/* ==========================================================
+   Semantic Utility Classes
+   ========================================================== */
+
+.theme-bg-app { background-color: var(--bg-primary); }
+.theme-bg-canvas { background-color: var(--bg-canvas); }
+.theme-bg-sidebar { background-color: var(--bg-sidebar); }
+.theme-bg-sidebar-footer { background-color: var(--bg-sidebar-footer); }
+.theme-bg-header { background-color: var(--bg-header); }
+.theme-bg-surface { background-color: var(--bg-surface); }
+.theme-bg-surface-elevated { background-color: var(--bg-surface-elevated); }
+.theme-bg-surface-hover:hover { background-color: var(--bg-surface-hover); }
+.theme-bg-surface-active:active { background-color: var(--bg-surface-active); }
+.theme-bg-input { background-color: var(--bg-input); }
+.theme-bg-card { background-color: var(--bg-card); }
+.theme-bg-modal { background-color: var(--bg-modal); }
+.theme-bg-modal-header { background-color: var(--bg-modal-header); }
+.theme-bg-dropdown { background-color: var(--bg-dropdown); }
+.theme-bg-user-msg { background-color: var(--bg-user-msg); }
+.theme-bg-model-msg { background-color: var(--bg-model-msg); }
+.theme-bg-code { background-color: var(--bg-code); }
+.theme-bg-code-header { background-color: var(--bg-code-header); }
+.theme-bg-tag { background-color: var(--bg-tag); }
+.theme-bg-pill { background-color: var(--bg-pill); }
+.theme-bg-accent { background-color: var(--accent); }
+.theme-bg-accent-light { background-color: var(--accent-light); }
+
+.theme-text-primary { color: var(--text-primary); }
+.theme-text-secondary { color: var(--text-secondary); }
+.theme-text-muted { color: var(--text-muted); }
+.theme-text-subtle { color: var(--text-subtle); }
+.theme-text-inverse { color: var(--text-inverse); }
+.theme-text-accent { color: var(--accent-text); }
+
+.theme-border { border-color: var(--border-default); }
+.theme-border-subtle { border-color: var(--border-subtle); }
+.theme-border-strong { border-color: var(--border-strong); }
+.theme-border-input { border-color: var(--border-input); }
+.theme-border-accent { border-color: var(--accent-border); }
+
+.theme-shadow-sm { box-shadow: var(--shadow-sm); }
+.theme-shadow-md { box-shadow: var(--shadow-md); }
+.theme-shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* ==========================================================
+   Smooth Theme Transitions, Responsive Reset & Global Scrollbars
+   ========================================================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Ensure images, svgs, and media never blow out their containers */
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Overflow wrap safety */
+.break-words-safe {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Touch targets & smooth scrolling */
+@media (max-width: 767px) {
+  button, select, input, textarea {
+    touch-action: manipulation;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
